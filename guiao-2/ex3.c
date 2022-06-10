@@ -14,7 +14,7 @@ int main(){
     for(int i=1; i<=N_PROCS; i++){
         pid_t pid;
         if((pid=fork())==0){
-            printf("Filho: processo do pai: %d processo do filho: %d número de ordem: %d\n", getppid(), getpid(), i);
+            printf("Filho: processo do pai: %d | processo do filho: %d | número de ordem: %d\n", getppid(), getpid(), i);
             _exit(i);
         }
         else{
@@ -30,7 +30,7 @@ int main(){
         pid_t terminated_pid = waitpid(n_procs[i-1], &status, 0);
 
         if(WIFEXITED(status)){ 
-            printf("Pai: processo do filho: %d status: %d\n", terminated_pid, WEXITSTATUS(status));
+            printf("Pai: processo do filho: %d | código: %d\n", terminated_pid, WEXITSTATUS(status));
         }
     }
 
