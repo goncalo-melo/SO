@@ -14,17 +14,17 @@ int main(){
     int status;
 
     if((pid = fork())==0){
-        printf("filho:\n processo paio: %d\n processo filho: %d\n", getppid(), getpid());
+        printf("Filho:\n Processo pai: %d\n Processo filho: %d\n", getppid(), getpid());
         _exit(0);
 
     }
     else{
         pid_t terminated_pid = wait(&status);
         if(WIFEXITED(status)){
-            printf("pai:\n processo pai: %d\n processo filho: %d\n", getpid(), terminated_pid);
+            printf("Pai:\n Processo pai: %d\n Processo filho: %d\n", getpid(), terminated_pid);
         }
         else{
-            printf("erro");
+            printf("Erro");
         }
     }
     return 0;

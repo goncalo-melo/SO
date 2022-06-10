@@ -8,7 +8,7 @@
 
 int main(){
 
-    printf("pai:\n processo pai: %d\n processo pai do pai: %d\n", getpid(), getppid());
+    printf("Pai:\n Processo pai: %d\n Processo pai do pai: %d\n", getpid(), getppid());
 
     return 0;
 }
