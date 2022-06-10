@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 #define BUF_SIZE 1024
+
 // --- mycat ---
 
 int main(){
@@ -17,7 +18,6 @@ int main(){
     while((bytes_read=read(fd_read, &buf, BUF_SIZE))>0){
         write(fd_write, &buf, bytes_read);
     }
-
 
     return 0;
 }
