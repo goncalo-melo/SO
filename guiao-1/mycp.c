@@ -26,8 +26,7 @@ int main(int argc, char *argv[3]){
     char buf[BUF_SIZE];
     int bytes_read=0;
     
-    while((bytes_read=read(fd_read, &buf, BUF_SIZE))>0){
-        
+    while((bytes_read=read(fd_read, &buf, BUF_SIZE))>0){     
         write(fd_write, &buf, bytes_read);
     }
 

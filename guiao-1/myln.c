@@ -68,7 +68,7 @@ int main(int argc, char *argv[]){
             write(1, &number, 3);
             line_count++;
         }
-        write(1, &buffer, n_bytes);
+        write(1, &buf, n_bytes);
     }
 
     close(fd_read);
